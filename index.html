@@ -709,9 +709,15 @@ main, .container {
 }
 
 .section-marker img {
-  max-width: 80px; /* adjust size */
-  opacity: 0.8;
+  max-width: 80px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
 }
+
+.section-marker img:hover {
+  opacity: 1;
+}
+
 
 
 
@@ -934,6 +940,24 @@ main, .container {
   font-size: 18px;
   text-shadow: 0 0 5px #0ff;
 }
+
+.profile-pic {
+  width: 100px;              /* adjust size */
+  height: 100px;
+  border-radius: 50%;        /* makes it circular */
+  overflow: hidden;          /* hides corners */
+  margin: 0 auto 1rem;       /* center + space below */
+  border: 3px solid #fff;    /* subtle frame */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft depth */
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fills circle without distortion */
+  display: block;
+}
+
 
     @keyframes glow-onoff {
       0% { opacity: 0; text-shadow: none; }
@@ -2825,7 +2849,7 @@ ul {
         </button>
         <button type="button" aria-label="View demos"
                 style="padding: 12px 18px; border-radius: 10px; border: none; background: #00ffd1; color: #031a16; cursor: pointer; font-weight: 700; letter-spacing: 0.2px;">
-          View Demos
+          Read Whitepaper
         </button>
       </div>
     </div>
@@ -2936,9 +2960,9 @@ ul {
 
 <div class="news-container">
   <div class="story-card">
-    <img src="c:\Users\Administrator\Pictures\Saved Pictures\Firstpic.png" alt="Cat yawning" class="story-image">
-    <h2 class="card-title">Why some cultures welcome 'hearing voices'</h2>
-    <p class="card-description">Western medicine views hearing disembodied voices as a symptom of psychosis. But that's not the case everywhere.</p>
+    <img src="https://images.pexels.com/photos/6855582/pexels-photo-6855582.jpeg" alt="Cat yawning" class="story-image">
+    <h2 class="card-title">Is your organisation ready for the quantum era</h2>
+    <p class="card-description">AHE has the solution to protect your organisation from quantum attacks</p>
     <div class="button-container">
       <button class="uiverse" id="cat-button">
         <div class="wrapper">
@@ -2961,9 +2985,9 @@ ul {
   </div>
 
   <div class="story-card">
-    <img src="https://csspicker.dev/api/image/?q=tennis+court+player&image_type=photo" alt="Tennis court" class="story-image">
-    <h2 class="card-title">Electric New York energy reignites etiquette debate</h2>
-    <p class="card-description">Is apologising for a net cord courteous or meaningless? BBC Sport looks at why tennis etiquette is back on the agenda at the US Open.</p>
+    <img src="https://images.pexels.com/photos/30901567/pexels-photo-30901567.jpeg" alt="Tennis court" class="story-image">
+    <h2 class="card-title">Can you find the hidden information?</h2>
+    <p class="card-description">The New Era of security is here</p>
     <div class="button-container">
       <button class="uiverse" id="tennis-button">
         <div class="wrapper">
@@ -2991,10 +3015,11 @@ ul {
 </div> <!-- end of .news-container -->
 
 <div class="section-marker">
-  <!-- Replace with your actual marker -->
 <img src="marker.png" alt="Section marker">
+ alt="Section marker"
+     onerror="this.onerror=null; this.src='./assets/marker.png';" />
 
-</div>
+
 
 
 
@@ -3115,9 +3140,12 @@ ul {
   
   <div class="cards-container">
     <div class="card3">
+           <div class="profile-pic">
+    <img src="https://media.licdn.com/dms/image/v2/D4E35AQEepSs6RfKatQ/profile-framedphoto-shrink_400_400/B4EZcmlFidHkAc-/0/1748698945976?e=1757502000&v=beta&t=0PydG8s_vN0YvKnVdbLk2girfzupYQyLbzUrznt5l_s" alt="Profile Name">
+  </div>
       <div class="card-content">
-        <h2>Aiden</h2>
-        <p>UI Developer</p>
+        <h2>Tony</h2>
+        <p>Lead Developer</p>
       </div>
       <ul class="example-2">
         <li class="icon-content">
@@ -3161,12 +3189,15 @@ ul {
 
     <div class="card3">
       <div class="card-content">
-        <h2>Brynn</h2>
-        <p>UX Designer</p>
+                 <div class="profile-pic">
+    <img src="https://media.licdn.com/dms/image/v2/C4E03AQEHt0uz1QKKFg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517988853372?e=1759968000&v=beta&t=Raz4HdNrTB9J8bFwWudDMI9eCdGeiqewomclRh5cH9A" alt="Profile Name">
+  </div>
+        <h2>Brynn Hux</h2>
+        <p>Project Manager</p>
       </div>
       <ul class="example-2">
         <li class="icon-content">
-          <a href="https://linkedin.com/" aria-label="LinkedIn" data-social="linkedin">
+          <a href="https://www.linkedin.com/in/brynn-huxtable-078b283b/" aria-label="LinkedIn" data-social="linkedin">
             <div class="filled"></div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
               <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" fill="currentColor"></path>
@@ -3206,12 +3237,15 @@ ul {
 
     <div class="card3">
       <div class="card-content">
-        <h2>Antonio</h2>
-        <p>Frontend Engineer</p>
+                 <div class="profile-pic">
+    <img src="https://media.licdn.com/dms/image/v2/C4D03AQH52-0fAHZNTQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1568027818209?e=1759968000&v=beta&t=4vo11FKcd-Fq2-8a9aDVWUEcEFztoLaMWtEOyq8_1e0" alt="Profile Name">
+  </div>
+        <h2>Antonio Fucek</h2>
+        <p>Client Liason officer</p>
       </div>
       <ul class="example-2">
         <li class="icon-content">
-          <a href="https://linkedin.com/" aria-label="LinkedIn" data-social="linkedin">
+          <a href="https://www.linkedin.com/in/fucek/" aria-label="LinkedIn" data-social="linkedin">
             <div class="filled"></div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
               <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" fill="currentColor"></path>
